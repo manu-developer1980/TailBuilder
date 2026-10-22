@@ -162,8 +162,8 @@ export function ColorPickerControl({
     }
   };
 
-  const handleNativeColorPick = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const hex = e.target.value;
+  const handleNativeColorPick = (e: React.SyntheticEvent<HTMLInputElement>) => {
+    const hex = e.currentTarget.value;
     setCustomInputValue(hex);
     onSelect(`${prefix}[${hex}]`);
   };
